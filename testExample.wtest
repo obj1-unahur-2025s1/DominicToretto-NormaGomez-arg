@@ -1,9 +1,31 @@
-import example.pepita
+import autos.*
 
-describe "group of tests for pepita" {
+describe "Tests de Ferrari" {
+  
+  test "Ferrari queda fuera de condiciones después de una prueba" {
+    ferrari.hacerPrueba()
+    assert.equals(false, ferrari.enCondiciones())
+  }
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "Ferrari se repara y vuelve a estar en condiciones" {
+    ferrari.reparar()
+    assert.equals(true, ferrari.enCondiciones())
+  }
+}
+
+describe "Tests de Flecha" {
+  
+test "Flecha está en condiciones" {
+  flecha.cantidadLitrosCombustible(100)
+  flecha.color(rojo)
+  assert.equals(true, flecha.enCondiciones())
   }
 
 }
+
+
+
+
+
+
+
